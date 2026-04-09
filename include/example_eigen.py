@@ -7,7 +7,7 @@ mat = sio.loadmat(model)
 V, F = mat['V'], mat['F']
 
 # solve eigen problem
-output = es.steklov_eigen_solver(V,F,num_iter=25,top_k=49)
+output = es.steklov_eigen_solver(V,F,num_iter=25,top_k=128)
 w_S, v_S = output.w_S, output.v_S
 # w_S and v_S are resulting eigenvalues and eigenvectors.
 

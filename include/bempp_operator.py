@@ -108,7 +108,7 @@ def bem_operators(V,F,*positional_parameters, **keyword_parameters):
     if('quadrature_order' in keyword_parameters):
         quadrature_order = keyword_parameters['quadrature_order']
         if not quadrature_order == 'default':
-            print 'quadrature_order', quadrature_order
+            print('quadrature_order', quadrature_order)
             bempp.api.global_parameters.quadrature.medium.single_order = quadrature_order
             bempp.api.global_parameters.quadrature.medium.double_order = quadrature_order
 
@@ -267,7 +267,7 @@ def symmetrized_boundary_operators(V,F,*positional_parameters, **keyword_paramet
     if('eps' in keyword_parameters):
         eps = keyword_parameters['eps']
 
-    print 'eps: %f\n' % eps
+    print('eps: %f\n' % eps)
 
     vertices = V.transpose()
     elements = F.transpose()
@@ -364,9 +364,9 @@ def toc(silent=False):
     duration_for_tic_toc = str( endTime_for_tictoc- startTime_for_tictoc)
     if not silent:
         if 'startTime_for_tictoc' in globals():
-            print "Elapsed time is " + duration_for_tic_toc + " seconds."
+            print("Elapsed time is " + duration_for_tic_toc + " seconds.")
         else:
-            print "Toc: start time not set"
+            print("Toc: start time not set")
     lock_for_tictoc = False
     return duration_for_tic_toc
 
